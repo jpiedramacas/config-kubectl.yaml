@@ -139,6 +139,25 @@ Para desplegar estos recursos en tu clúster de Kubernetes, sigue estos pasos:
    kubectl apply -f persistentvolumeclaim.yaml
    ```
 
+## Otros archivos de configuración
+
+1. **ConfigMap** (`configmap.yaml`):
+   - **Función**: Almacena datos de configuración en pares clave-valor que pueden ser consumidos por los pods. Esto permite separar la configuración del código de la aplicación.
+
+2. **Secret** (`secret.yaml`):
+   - **Función**: Almacena información sensible, como contraseñas, tokens y claves SSH, de forma segura. Los pods pueden consumir estos secretos para acceder a recursos protegidos sin exponer datos sensibles en el código.
+
+3. **Ingress** (`ingress.yaml`):
+   - **Función**: Gestiona el acceso externo a los servicios en el clúster, generalmente HTTP y HTTPS. Proporciona reglas de enrutamiento para dirigir el tráfico a los servicios adecuados basándose en el nombre de host y la ruta URL.
+
+4. **StatefulSet** (`statefulset.yaml`):
+   - **Función**: Gestiona el despliegue y el escalado de un conjunto de pods, y garantiza el orden y la persistencia de los pods. Es útil para aplicaciones con estado, como bases de datos, donde el orden y la consistencia son importantes.
+
+5. **Job** (`job.yaml`):
+   - **Función**: Gestiona la creación de uno o más pods que se encargan de completar un trabajo específico y luego terminan. Es útil para tareas batch y trabajos que necesitan ejecutarse hasta completarse.
+
+Estos archivos permiten una configuración avanzada y específica para diferentes necesidades dentro de un clúster de Kubernetes.
+
 ## Personalización
 
 Asegúrate de modificar los valores en los archivos YAML según las necesidades específicas de tu aplicación, como nombres, imágenes de contenedor, puertos y rutas de almacenamiento.

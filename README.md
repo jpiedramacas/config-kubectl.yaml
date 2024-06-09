@@ -115,29 +115,6 @@ spec:
 - `spec.accessModes`: Modos de acceso solicitados para el volumen.
 - `spec.resources.requests.storage`: Cantidad de almacenamiento solicitada.
 
-## Despliegue
-
-Para desplegar estos recursos en tu clúster de Kubernetes, sigue estos pasos:
-
-1. Crea el deployment:
-   ```sh
-   kubectl apply -f deployment.yaml
-   ```
-
-2. Crea el servicio:
-   ```sh
-   kubectl apply -f service.yaml
-   ```
-
-3. (Opcional) Crea el PersistentVolume:
-   ```sh
-   kubectl apply -f persistentvolume.yaml
-   ```
-
-4. (Opcional) Crea el PersistentVolumeClaim:
-   ```sh
-   kubectl apply -f persistentvolumeclaim.yaml
-   ```
 
 ## Otros archivos de configuración
 

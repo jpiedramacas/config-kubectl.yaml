@@ -11,9 +11,9 @@ Asegúrate de modificar los valores en los archivos YAML según las necesidades 
 
 ## Archivos de Configuración
 
-### 1. Deployment YAML
+### 1. Deployment 
 
-El archivo `Deployment` define cómo se debe desplegar una aplicación en Kubernetes, incluyendo el número de réplicas, la imagen del contenedor y los puertos expuestos.
+El archivo `deployment.yaml` define cómo se debe desplegar una aplicación en Kubernetes, incluyendo el número de réplicas, la imagen del contenedor y los puertos expuestos.
 
 ```yaml
 apiVersion: apps/v1
@@ -48,9 +48,9 @@ spec:
   - `image`: Imagen del contenedor.
   - `ports.containerPort`: Puerto expuesto por el contenedor.
 
-### 2. Service YAML
+### 2. Service 
 
-El archivo `Service` define cómo se exponen los pods en la red. Permite acceder a la aplicación desde dentro y fuera del clúster.
+El archivo `service.yaml` define cómo se exponen los pods en la red. Permite acceder a la aplicación desde dentro y fuera del clúster.
 
 ```yaml
 apiVersion: v1
@@ -74,9 +74,9 @@ spec:
   - `port`: Puerto en el que el servicio está disponible externamente.
   - `targetPort`: Puerto en el contenedor al que se redirige el tráfico, debe coincidir con `containerPort` en el Deployment.
 
-### 3. PersistentVolume YAML (Opcional)
+### 3. PersistentVolume (Opcional)
 
-El archivo `PersistentVolume` define un volumen persistente que puede ser utilizado por los pods para almacenamiento de datos.
+El archivo `persistentvolume.yaml` define un volumen persistente que puede ser utilizado por los pods para almacenamiento de datos.
 
 ```yaml
 apiVersion: v1
@@ -99,9 +99,9 @@ spec:
 - `spec.accessModes`: Modos de acceso al volumen.
 - `spec.hostPath.path`: Ruta en el nodo donde se almacenarán los datos.
 
-### 4. PersistentVolumeClaim YAML (Opcional)
+### 4. PersistentVolumeClaim (Opcional)
 
-El archivo `PersistentVolumeClaim` solicita un volumen persistente del clúster con las características especificadas.
+El archivo `persistentvolumeclaim.yaml` solicita un volumen persistente del clúster con las características especificadas.
 
 ```yaml
 apiVersion: v1

@@ -5,7 +5,7 @@ Este documento proporciona una guía detallada sobre los archivos de configuraci
 ## Personalización
 
 Asegúrate de modificar los valores en los archivos YAML según las necesidades específicas de tu aplicación, como nombres, imágenes de contenedor, puertos y rutas de almacenamiento.
-1. **Documentaciónn oficial de Kubernetes de Imágenes** [DOC-Images](https://kubernetes.io/docs/concepts/containers/images/)
+1. **Documentación oficial de Kubernetes de Imágenes** [DOC-Images](https://kubernetes.io/docs/concepts/containers/images/)
 2. **Imágenes** [dockerhub](https://hub.docker.com/search?image_filter=official)
 
 

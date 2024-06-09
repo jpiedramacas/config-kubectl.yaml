@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mi-deployment # Nombre del deployment, modificar según sea necesario
+spec:
+  replicas: 1 # Número de réplicas del pod, ajustar según requisitos
+  selector:
+    matchLabels:
+      app: mi-app # Etiqueta para seleccionar los pods, debe coincidir con las etiquetas en template.metadata.labels
+  template:
+    metadata:
+      labels:
+        app: mi-app # Etiqueta para el pod, debe coincidir con el selector
+    spec:
+      containers:
+      - name: mi-contenedor # Nombre del contenedor, modificar según sea necesario
+        image: mi-imagen # Imagen del contenedor, cambiar a la imagen que se desea usar (por ejemplo, nginx:latest)
+        ports:
+        - containerPort: 8080 # Puerto en el contenedor que la aplicación expone, ajustar según sea necesario

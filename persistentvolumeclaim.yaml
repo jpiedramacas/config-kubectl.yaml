@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: mi-pvc # Nombre del PersistentVolumeClaim, modificar según sea necesario
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi # Cantidad de almacenamiento solicitada, ajustar según requisitos

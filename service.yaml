@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: mi-servicio # Nombre del servicio, modificar según sea necesario
+spec:
+  selector:
+    app: mi-app # Selector que coincide con las etiquetas de los pods definidos en el Deployment
+  ports:
+    - protocol: TCP
+      port: 80 # Puerto en el que el servicio estará disponible externamente
+      targetPort: 8080 # Puerto en el contenedor al que se redirige el tráfico, debe coincidir con containerPort en el Deployment
